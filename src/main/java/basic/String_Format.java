@@ -1,11 +1,15 @@
 package basic;
 
+import java.util.Arrays;
+
 public class String_Format {
 
 	public static void main(String[] args) {
-		String str="123-456-7890";
-		System.out.println(str.replace("-",""));
-
+		String names[] = { "www.yahoo.com",  "www.gmail.com",  "www.rediff.com",  "www.arkut.com" };
+		System.out.println(Arrays.toString(names));
+		for(String str:names){
+			System.out.println(str.substring(str.indexOf(".")+1, str.lastIndexOf(".")));
+		}
 	}
 
 }

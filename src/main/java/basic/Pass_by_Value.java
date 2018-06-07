@@ -12,7 +12,7 @@ public class Pass_by_Value {
 	public void setName(String name) {
 		this.name = name;
 	}
-	static void change(int val) {
+	void change(int val) {
 		val = 2000;
 	}
 
@@ -21,7 +21,7 @@ public class Pass_by_Value {
 		pv.setName("Hello");
 		List myList = new ArrayList();
 		int single = 1000;
-		change(single);
+		pv.change(single);
 		System.out.println(single);
 	}
 
