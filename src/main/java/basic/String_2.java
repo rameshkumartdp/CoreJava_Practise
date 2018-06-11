@@ -13,7 +13,7 @@ public class String_2 {
 		System.out.println(str3.intern()==str2);
 		
 		int[] val = {1,2,3};
-		System.out.println(Arrays.toString(val).split(",").length);
+		System.out.println(Arrays.toString(val).split(","));
 	}
 
 }

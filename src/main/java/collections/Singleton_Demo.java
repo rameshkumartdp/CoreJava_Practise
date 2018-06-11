@@ -14,7 +14,6 @@ public class Singleton_Demo {
 		List numList = Collections.singletonList(myList);
 
 		System.out.println("numList elements: " + numList);
-		numList.add("hhh");
 
 	}
 }
