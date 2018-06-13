@@ -17,7 +17,7 @@ public class Immutable {
 		System.out.println(i1);
 		String s1=  null;
 		System.out.println(s1+"hi");
-		System.out.println(2+3+"4");
+		System.out.println(2+3);
         System.out.println("2"+3+4);
         
         String mystr = "ramesh";

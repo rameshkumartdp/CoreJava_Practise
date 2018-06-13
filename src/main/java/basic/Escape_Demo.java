@@ -5,7 +5,7 @@ package basic;
  */
 public class Escape_Demo {
     public static void main(String[] args) {
-        String str = "hello\'tj";
+        String str = "hello\tj";
         System.out.println(str);
     }
 }

@@ -19,10 +19,10 @@ public class Static_Null {
 			System.out.println("a=b");
 		}
 		if(a==c){
-			System.out.println("a=c");
+			System.out.println("a=c  1");
 		}
 		if(a==c.intern()){
-			System.out.println("a=c");
+			System.out.println("a=c  2");
 		}
 		obj.display();
 		

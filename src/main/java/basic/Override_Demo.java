@@ -5,6 +5,7 @@ interface Mine {
 }
 
 class SubClass implements Mine {
+	 @Override
 	 public void print() {
 		System.out.println("-----Parent-------> ");
 	}
@@ -17,9 +18,10 @@ class SubClass implements Mine {
 }
 
 public class Override_Demo extends Parent {
+	 @Override
 	 public void display() throws NullPointerException{
 		 super.display();
-		System.out.println("-----Child-------> ");
+		 System.out.println("-----Child-------> ");
 	}
 	public static void main(String[] args) {
 		Override_Demo dem = new Override_Demo();
