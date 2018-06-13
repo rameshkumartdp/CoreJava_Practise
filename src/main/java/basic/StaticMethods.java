@@ -4,8 +4,9 @@ package basic;
  * Created by rk0000 on 6/13/18.
  */
 public class StaticMethods {
-    public static void display() {
+    public static String display() {
         System.out.println("DISPLAY--->");
+        return "";
     }
 
     public static void main(String[] args) {

@@ -12,6 +12,7 @@ public class Singleton_Demo {
 		myList.add("JAVA");
 		myList.add("hi");
 		List numList = Collections.singletonList(myList);
+		numList.add("bye");   //UnsupportedOperationException
 
 		System.out.println("numList elements: " + numList);
 
