@@ -5,7 +5,7 @@ import java.util.HashMap;
 public class LoadFactor {
 
 	public static void main(String[] args) {
-		HashMap map = new HashMap(10,12.5f);
+		HashMap map = new HashMap(10,12);
 		map.put("hello", "hi");
 		System.out.println(map.size());
 	}

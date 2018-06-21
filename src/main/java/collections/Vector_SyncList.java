@@ -23,16 +23,20 @@ public class Vector_SyncList {
 		//	list.add(50);
 		}*/
 		
-		List cpList = new CopyOnWriteArrayList(); 
+		List cpList = new CopyOnWriteArrayList();
 		cpList.add(10);
 		cpList.add(20);
 		cpList.add(30);
 		cpList.add(40);
 		Iterator itr1 = cpList.iterator();
 		cpList.add(50);
+		cpList.remove(4);
 		while(itr1.hasNext()) {
 			System.out.println(itr1.next());
-			
+		}
+
+		if(cpList.contains(20)){
+			System.out.println("hi");
 		}
 	}
 

@@ -1,6 +1,7 @@
 package basic;
 
 import java.lang.annotation.*;
+import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;
 
 /**
@@ -9,22 +10,29 @@ import java.lang.reflect.Method;
 
 @Inherited
 @Retention(RetentionPolicy.RUNTIME)
-@Target(ElementType.METHOD)
+@Target(ElementType.TYPE)
 @interface calculate {
     String name();
 }
 
+@calculate(name="ramesh")
 public class AnnotationCreate {
-    @calculate(name="ramesh")
     public void hello() {
         System.out.println("HELLO");
     }
+}
+
+class AnnotationSub extends AnnotationCreate {
+
+    public void hello() {
+        System.out.println("In subclass");
+    }
 
     public static void main(String[] args) throws Exception{
-        AnnotationCreate ac = new AnnotationCreate();
+        AnnotationSub ac = new AnnotationSub();
         Class cls = ac.getClass();
-        Method method = cls.getMethod("hello");
-        calculate cal = method.getAnnotation(calculate.class);
-        System.out.println(cal.name());
+        Annotation cal = cls.getAnnotation(calculate.class);
+        calculate ann = (calculate)cal;
+        System.out.println(ann.name());
     }
 }

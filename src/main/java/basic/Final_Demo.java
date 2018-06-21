@@ -11,7 +11,7 @@ public class Final_Demo {
 }
 
 class Final_Sub extends Final_Demo {
-
+    //@Override
     public static void display() {
         System.out.println("in Sub-->");
     }

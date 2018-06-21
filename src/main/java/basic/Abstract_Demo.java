@@ -2,7 +2,7 @@ package basic;
 
 abstract class Super_Class {
 	 abstract int myMethod();
-	  public void display() {
+	 public void display() {
 		  System.out.println("ABSTRACT SUPER CLASS------->");
 	  }
 }

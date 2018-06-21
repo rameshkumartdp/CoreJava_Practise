@@ -5,26 +5,14 @@ interface First {
 }
 
 interface Second {
-	String print();
+	//String print();
 }
 
-/*
-public class Multi_Inheritance implements First, Second{
 
-	*/
-/*public String print(){
-		
-	}
+public class Multi_Inheritance implements First, Second {
+	@Override
+	public void print() {}
+	//public String print() { return "";}
 
-	public void print(){
-
-	}
-*//*
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
-
+	public static void main(String[] args) {}
 }
-*/

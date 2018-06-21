@@ -11,19 +11,14 @@ public class CarPool {
 
 		String carLocation = null;
 		for (String k: floors) {
-
-		//	String[][] arrays = new String[6][9];
-		
-		//    To find car location from all the floors, have to uncomment line no. 15 
-		//	Sample example for single floor.
-			String[][] cars = {   {"R","R","R","R","R","R","R","R","R"}, 
-												 {"R","R","R","R","R","R","R","R","R"},
-												 {"R","R","R","R","R","R","R","R","R"},
-												 {"R","R","R","R","B","R","R","R","R"},
-												 {"R","R","R","R","R","R","R","R","R"},
-												 {"R","R","R","R","R","R","R","R","R"}
-											};
-			Map<Integer, List<String>> map = new HashMap<Integer, List<String>>();
+			String[][] cars = {   {"R","R","R","R","R","R","R","R","R"},
+								  {"R","R","R","R","R","R","R","R","R"},
+					              {"R","R","R","R","R","R","R","R","R"},
+					              {"R","R","R","R","B","R","R","R","R"},
+					              {"R","R","R","R","R","R","R","R","R"},
+					              {"R","R","R","R","R","R","R","R","R"}
+		                      };
+			Map<Integer, List<String>> map = new HashMap<>();
 			List<String> list;
 			for (int i = 0; i < cars.length; i++) {
 				list = Arrays.asList(cars[i]);
@@ -32,13 +27,12 @@ public class CarPool {
 			for (int i = 0; i < map.size(); i++) {
 				for (int j = 0; j < map.get(i).size(); j++) {
 					if (map.get(i).get(j).equals(car)) {
-						carLocation =  "Car found at floor "+(k)+"  ,"+(i + 1) + " row  " + ", position "+(j + 1);
+						carLocation =  "Car found at floor "+(k)+", "+ "row " + (i + 1) +", position "+(j + 1);
 						break;
 					}
 				}
 			}
 		}
-		//Now it always finds car location @J floor only
 		return carLocation;
 	}
 

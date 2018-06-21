@@ -15,7 +15,7 @@ public class WordCount {
 
 	public static void main(String[] args) throws Exception {
 
-		BufferedReader br = new BufferedReader(new FileReader("D:\\Demo.txt"));
+		BufferedReader br = new BufferedReader(new FileReader("/Users/rk0000/Ramesh/Code/Practise/src/main/resources/files/1.txt"));
 		String str = null;
 		Map<String,Integer> map = new HashMap<String,Integer>();
 		while ((str = br.readLine()) != null) {

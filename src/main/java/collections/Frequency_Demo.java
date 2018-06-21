@@ -25,7 +25,7 @@ public class Frequency_Demo {
 			BufferedReader br = new BufferedReader(new FileReader("D://Demo.txt"));
 			String str;
 			StringBuffer sb = new StringBuffer();
-			List<String> fileList = new ArrayList<String>();
+			List<String> fileList;
 			while((str=br.readLine())!=null) {
 				 sb = sb.append(str+" ");
 			}

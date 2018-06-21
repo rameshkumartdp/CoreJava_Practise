@@ -2,6 +2,7 @@ package basic;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
+import java.util.Date;
 
 public class Demo {
 
@@ -16,18 +17,18 @@ public class Demo {
 		System.out.println("String");
 		return obj;
 	}
+}
 
-	public static void main(String[] args) throws Exception{
-		Demo d = new Demo();
-        Class cls = Class.forName("basic.Singleton");
-        /*Method fld= cls.getDeclaredMethod("getInstance",cls);
-        fld.setAccessible(true);
-        fld.invoke(cls);*/
-        Singleton single = (Singleton)cls.newInstance();
-        System.out.println("OBJ-------->    "+single);
-        System.out.println(d.val);
-		d.getDescription(d);
-		d.getDescription("Hello");
+class DemoSub extends Demo {
+	@Override
+	public String getDescription(String obj) {
+		System.out.println("String SUB");
+		return obj;
 	}
 
+	public static void main(String[] args) throws Exception{
+		DemoSub d = new DemoSub();
+		d.getDescription("Hello");
+		d.getDescription(new Date());
+	}
 }

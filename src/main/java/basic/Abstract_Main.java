@@ -12,9 +12,9 @@ public abstract class Abstract_Main {
         System.out.println("Hello");
     }
 
-    /*public static void main(String[] args) {
+    public static void main(String[] args) {
         System.out.println("In Main");
-    }*/
+    }
 }
 
 class Abtstract_Sub extends Abstract_Main{

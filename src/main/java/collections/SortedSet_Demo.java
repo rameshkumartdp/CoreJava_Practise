@@ -8,7 +8,11 @@ class Students implements Comparable<Students> {
 	Students(int id){
 		this.id=id;
 	}
-	
+
+	public int getId() {
+		return id;
+	}
+
 	@Override
 	public int compareTo(Students std) {
 		return this.id - std.id;
@@ -26,7 +30,7 @@ public class SortedSet_Demo {
 		tree.add(new Students(20) );
 		
 		//tree.add(false);
-		System.out.println(tree);
+		tree.forEach((Students obj) -> System.out.println(obj.getId()));
 	}
 
 }

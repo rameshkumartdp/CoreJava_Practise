@@ -7,7 +7,7 @@ public class PipedExceptions {
     public static void main(String[] args) {
         int[] values = {1,2,3,4,5};
         try {
-            System.out.println(values[0]/0);
+            System.out.println(values[8]/0);
         } catch(ArithmeticException | IndexOutOfBoundsException ex) {
             ex.printStackTrace();
         } catch(RuntimeException e) {

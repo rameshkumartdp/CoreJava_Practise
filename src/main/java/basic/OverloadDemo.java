@@ -8,7 +8,7 @@ public class OverloadDemo {
 
     }
 
-    private void display(int er){
-
+    private int display(int er){
+        return 1;
     }
 }

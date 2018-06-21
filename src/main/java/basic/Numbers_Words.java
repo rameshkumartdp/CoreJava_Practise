@@ -20,10 +20,10 @@ public class Numbers_Words {
     }
 
     public static void main(String[] args) {
-        int input = Integer.parseInt(args[0]);
-        pw((input/10000000)%100, "crore");
-        pw((input/100000)%100, "lakhs");
-        pw((input/1000)%100, "thousand");
+        int input = Integer.parseInt(new java.util.Scanner(System.in).next());
+        pw((input/1_00_00_000)%100, "crore");
+        pw((input/1_00_000)%100, "lakhs");
+        pw((input/1_000)%100, "thousand");
         pw((input/100)%10, "hundred");
         pw(input%100, "");
     }

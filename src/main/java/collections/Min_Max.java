@@ -13,8 +13,8 @@ public class Min_Max
     firstList.add(20);
     System.out.println("Elements firstList: " + firstList);
 
-    System.out.println("Minimum value element firstList: " + Collections.min(firstList));
-    System.out.println("Maximum value element firstList: " + Collections.max(firstList));
+    //System.out.println("Minimum value element firstList: " + Collections.min(firstList));
+    //System.out.println("Maximum value element firstList: " + Collections.max(firstList));
 
     ArrayList secondList = new ArrayList();
     secondList.add("five");
