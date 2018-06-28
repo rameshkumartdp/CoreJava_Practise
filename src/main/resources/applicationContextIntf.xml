@@ -6,21 +6,10 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
 
-	<bean id="dem" class="spring.basic.Demo">
-		<property name="age" >
+	<bean id="dem" class="spring.intfinjection.Demo" scope="prototype">
+		<property name="name" >
 			<value>Ramesh</value>
 		</property>
-	</bean>
-
-	<bean id="di" class="spring.basic.DemoInterImpl"  scope="prototype" autowire="byType" init-method="init" destroy-method="destroy">
-		<constructor-arg type="java.lang.String">
-			<value>Hello</value>
-		</constructor-arg >
-		</bean>
-		<bean id="di1" class="spring.basic.DemoInterImpl">
-		<constructor-arg>
-			<value>1234</value>
-		</constructor-arg >
 	</bean>
 
 </beans>

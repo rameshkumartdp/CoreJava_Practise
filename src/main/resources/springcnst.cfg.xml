@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd"> -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+	<bean id="dem" class="spring.constructor.Demo">
+		<constructor-arg type="java.lang.String" index="0">
+			<value>Ramesh</value>
+		</constructor-arg>
+		<constructor-arg type="java.util.List" index="1">
+			<list>
+				<value>Ramesh</value>
+				<value>Kumar</value>
+				<value>Kadapa</value>
+			</list>
+		</constructor-arg>
+		<constructor-arg type="java.util.Set" index="2">
+			<set>
+				<value>Hello</value>
+				<value>How</value>
+				<value>R U</value>
+			</set>
+		</constructor-arg>
+		<constructor-arg type="java.util.Map" index="3">
+			<map>
+				<entry>
+					<key>
+						<value>name</value>
+					</key>
+					<value>Ramesh</value>
+				</entry>
+			</map>
+		</constructor-arg>
+		<constructor-arg type="java.util.Properties" index="4">
+			<props>
+				<prop key="Salary">90K</prop>
+				<prop key="age">29</prop>
+			</props>
+		</constructor-arg>
+	</bean>
+
+</beans>

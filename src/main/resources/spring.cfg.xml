@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd"> -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+	<bean id="dem" class="spring.basic.Demo">
+		<property name="age" >
+			<value>Ramesh</value>
+		</property>
+		<property name="list">
+			<list>
+				<value>Ramesh</value>
+				<value>Kumar</value>
+				<value>Kadapa</value>
+			</list>
+		</property>
+		<property name="set">
+			<set>
+				<value>Hello</value>
+				<value>How</value>
+				<value>R U</value>
+			</set>
+		</property>
+		<property name="map">
+			<map>
+				<entry>
+					<key>
+						<value>name</value>
+					</key>
+					<value>Ramesh</value>
+				</entry>
+			</map>
+		</property>
+		<property name="prop">
+			<props>
+				<prop key="Salary">1L</prop>
+				<prop key="age">29</prop>
+			</props>
+		</property>
+	</bean>
+
+</beans>

@@ -10,6 +10,6 @@
 		<property name = "hibernate.connection.password">kumar</property>
 		<property name = "hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
 		<property name = "show_sql">true</property>
-		<mapping resource="employeecomp.hbm.xml"/>
+		<mapping resource="employeect.hbm.xml"/>
 	</session-factory>
 </hibernate-configuration>

@@ -1,4 +1,4 @@
-package spring.basic;
+package spring.constructor;
 
 import java.util.List;
 import java.util.Map;
@@ -11,6 +11,14 @@ public class Demo {
 	private Set set;
 	private Map map;
 	private Properties prop;
+
+	Demo(String age, List list, Set set, Map map, Properties prop) {
+		this.age = age;
+		this.list = list;
+		this.set = set;
+		this.map = map;
+		this.prop = prop;
+	}
 
 	public String getAge() {
 		return age;

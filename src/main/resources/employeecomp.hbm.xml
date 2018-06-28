@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+	<class name="hibernate.Component.EmployeeBean" table="employee">
+
+		<id name="id" column="id"/>
+		<component name="details" class="hibernate.Component.SalaryDetails">
+			<property name="salary" column="salary"/>
+			<property name="company" column="company"/>
+		</component>
+		<property name="name" column="name"/>
+
+	</class>
+	
+</hibernate-mapping>

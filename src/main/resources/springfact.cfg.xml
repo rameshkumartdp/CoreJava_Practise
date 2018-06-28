@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd"> -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+	<bean id="det" class= "spring.factory.Details" factory-method="getDetailsInstance">
+		<constructor-arg index="0">
+			<value>Ramesh</value>
+		</constructor-arg>
+		<property name="company">
+			<value>Kumar</value>
+		</property>
+	</bean>
+
+	<bean id="dem" class="spring.factory.Demo">
+		<property name="age">
+			<value>29</value>
+		</property>
+		<property name="details">
+			<ref bean="det"/>
+		</property>
+	</bean>
+
+</beans>
