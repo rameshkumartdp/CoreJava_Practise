@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd"> -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+	<bean id="auto" class="spring.autowire.AutoDemo">
+		<property name="autoName">
+			<value>AUTO1</value>
+		</property>
+	</bean>
+
+	<!--<bean id="auto1" class="spring.autowire.AutoDemo">
+		<property name="autoName">
+			<value>AUTO2</value>
+		</property>
+	</bean>-->
+
+	<bean id="dem" class="spring.autowire.Demo" scope="singleton" autowire="constructor">
+		<property name="name" >
+			<value>Ramesh</value>
+		</property>
+		<!--<property name="auto">
+			<ref bean="auto"/>
+		</property>-->
+		<!--<constructor-arg>
+			<ref bean="auto1"/>
+		</constructor-arg>-->
+	</bean>
+
+</beans>

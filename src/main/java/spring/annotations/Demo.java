@@ -1,16 +1,8 @@
-package spring.appcontext;
-
-import org.springframework.beans.factory.annotation.Autowired;
-
-import java.util.List;
-import java.util.Map;
-import java.util.Properties;
-import java.util.Set;
+package spring.annotations;
 
 public class Demo {
 	private String name;
 
-	@Autowired()
 	public String getName() {
 		return name;
 	}

@@ -16,6 +16,9 @@ public class AnnotationDemo extends SuperDemo {
     }
 
     @Deprecated
+    /**
+     * @deprecated Please don't use this!!!. It is depricated
+     */
     void show() {
         System.out.println("SHOW");
     }
