@@ -22,7 +22,7 @@ public class Frequency_Demo {
 		System.out.println(Collections.frequency(myList, 20));
 		
 		try {
-			BufferedReader br = new BufferedReader(new FileReader("D://Demo.txt"));
+			BufferedReader br = new BufferedReader(new FileReader("/Users/rk0000/Ramesh/Code/Practise/src/main/resources/frequency.txt"));
 			String str;
 			StringBuffer sb = new StringBuffer();
 			List<String> fileList;

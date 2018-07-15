@@ -9,7 +9,8 @@ public class HashMap_Demo {
 		map.put(1,"ramesh");
 		map.put("hello",false);
 		map.put(null,12.34);
-		System.out.println(map);
+		System.out.println(map.put(10,"kumar"));
+		//System.out.println(map);
 
 	}
 
