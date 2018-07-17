@@ -14,7 +14,7 @@ public class Singleton implements Cloneable, Serializable {
 	}
 
 	public static Singleton getInstance() {
-		if (single== null) {
+		if (single == null) {
 			synchronized (Singleton.class) {
 				if (single == null) {
 					single = new Singleton();
@@ -52,7 +52,7 @@ public class Singleton implements Cloneable, Serializable {
 				constructor.setAccessible(true);
 
 				Singleton single4 = (Singleton) cls.newInstance();
-				System.out.println("with Reflection() --->  "+single4.hashCode());
+				System.out.println("with Reflection() --->  " + single4.hashCode());
 
 			} catch(IOException e) {
 				e.printStackTrace();
@@ -65,7 +65,6 @@ public class Singleton implements Cloneable, Serializable {
 			} catch(IllegalAccessException e) {
 				e.printStackTrace();
 			}
-
 		} catch (CloneNotSupportedException e) {
 			e.printStackTrace();
 		}
@@ -79,5 +78,4 @@ public class Singleton implements Cloneable, Serializable {
 	protected Object readResolve() {
 		return single;
 	}
-
 }
