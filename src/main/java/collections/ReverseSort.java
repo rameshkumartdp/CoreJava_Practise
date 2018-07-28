@@ -9,10 +9,8 @@ import java.util.List;
  */
 public class ReverseSort {
     public static void main(String[] args) {
-        String[] val = {"tom", "jerry", "spike"};
-        List myList = Arrays.asList(val);
+        List myList = Arrays.asList("tom", "jerry", "spike");
         Collections.sort(myList, Collections.reverseOrder());
         System.out.println(myList);
-
     }
 }

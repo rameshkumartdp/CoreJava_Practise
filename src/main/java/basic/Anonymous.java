@@ -14,10 +14,8 @@ abstract class Hello_Old {
 class Anonymous  {
 	
 	public static void main(String[] args) {
-		Hello_New anon = new Hello_New() {
-			public void print(){
+		Hello_New anon = () -> {
 				System.out.println("Hello WOrld");
-			}
 		};
 		anon.print();
 		new Hello_New() {

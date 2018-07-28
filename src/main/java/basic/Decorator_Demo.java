@@ -3,11 +3,11 @@ package basic;
 /**
  * Created by rk0000 on 01-02-2017.
  */
- interface Base {
+interface Base {
     public String welcome();
 }
 
-class Derived implements Base{
+class Derived implements Base {
     public String welcome(){
         return "Welcome to Decorator";
     }
@@ -18,8 +18,7 @@ abstract class DerivedDecorator implements Base {
     DerivedDecorator(Base base){
         this.base=base;
     }
-    public String welcome()
-    {
+    public String welcome() {
         return base.welcome();
     }
 }
@@ -28,8 +27,7 @@ class DerivedSub1 extends DerivedDecorator {
     DerivedSub1(Base base) {
         super(base);
     }
-    public String welcome()
-    {
+    public String welcome() {
         return base.welcome()+" first ";
     }
 }
@@ -38,8 +36,7 @@ class DerivedSub2 extends DerivedDecorator {
     DerivedSub2(Base base) {
         super(base);
     }
-    public String welcome()
-    {
+    public String welcome() {
         return base.welcome()+" second ";
     }
 }

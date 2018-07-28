@@ -20,7 +20,7 @@ public class Numbers_Words {
     }
 
     public static void main(String[] args) {
-        int input = Integer.parseInt(new java.util.Scanner(System.in).next());
+        int input = 123456;
         pw((input/1_00_00_000)%100, "crore");
         pw((input/1_00_000)%100, "lakhs");
         pw((input/1_000)%100, "thousand");

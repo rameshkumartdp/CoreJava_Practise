@@ -44,14 +44,13 @@ class HotelItems {
     int initialSet = 2;
 
     public void produce() throws Exception {
-        int value = 0;
         for(int i=0; i<10; i++) {
             synchronized (this) {
                 if(items.size() == initialSet) {
                     wait();
                 }
-                System.out.println("Producing ---> "+value);
-                items.add(value++);
+                System.out.println("Producing ---> "+i);
+                items.add(i);
                 notify();
                 Thread.sleep(1000);
             }

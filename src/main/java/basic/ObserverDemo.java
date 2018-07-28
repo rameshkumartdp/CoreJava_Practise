@@ -3,10 +3,6 @@ package basic;
 import java.util.Observable;
 import java.util.Observer;
 
-/**
- * Created by rk0000 on 6/13/18.
- */
-
 class Principal implements Observer{
     public void update(Observable obs, Object obj){
         System.out.println("Principal observing   "+obj);
@@ -36,6 +32,6 @@ public class ObserverDemo {
         Student st = new Student();
         st.addObserver(pl);
         st.addObserver(hod);
-        st.marks(50);
+        st.marks(30);
     }
 }
