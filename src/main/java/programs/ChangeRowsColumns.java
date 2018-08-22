@@ -4,9 +4,9 @@ package programs;
  * Created by rk0000 on 7/3/18.
  */
 public class ChangeRowsColumns {
-    static int[][] input = { {1,2,3},
-                      {4,5,6},
-                      {7,8,9} };
+    static int[][] input = {  {1,2,3},
+                              {4,5,6},
+                              {7,8,9}  };
 
     public static void main(String[] args) {
         for(int i=0; i<input.length; i++) {

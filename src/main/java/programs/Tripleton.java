@@ -19,11 +19,9 @@ public class Tripleton {
         }
         return tripleton;
     }
-
 }
 
 class TripletonClient {
-
     public static void main(String[] args) {
         Tripleton tpl = Tripleton.getInstance();
         Tripleton tpl1 = Tripleton.getInstance();

@@ -4,6 +4,7 @@ package programs;
  * Created by rk0000 on 7/20/18.
  */
 public class StringReverse {
+
     public String getReverse(String str) {
         String reverse = "";
         if(str.length()==1) {

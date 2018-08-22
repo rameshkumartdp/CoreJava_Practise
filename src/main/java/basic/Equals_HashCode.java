@@ -41,7 +41,7 @@ public class Equals_HashCode {
 		HashMap<Equals_HashCode, Integer> m = new HashMap<Equals_HashCode, Integer>();
 		m.put(a1, 10);
 		m.put(a2, 20);
-		System.out.println(m);
+		//System.out.println(m);
 		System.out.println(m.get(new Equals_HashCode("green")));
 
 	}

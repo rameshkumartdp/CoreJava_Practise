@@ -10,26 +10,20 @@ import java.util.List;
 public class ProducerConsumer {
     public static void main(String[] args) throws Exception {
         HotelItems hotel = new HotelItems();
-        Thread t1 = new Thread(new Runnable() {
-            @Override
-            public void run() {
+        Thread t1 = new Thread( () -> {
                 try {
                     hotel.produce();
                 } catch (Exception e) {
                     e.printStackTrace();;
                 }
-            }
         });
 
-        Thread t2 = new Thread(new Runnable() {
-            @Override
-            public void run() {
+        Thread t2 = new Thread( () -> {
                 try {
                     hotel.consume();
                 } catch (Exception e) {
                     e.printStackTrace();;
                 }
-            }
         });
 
         t1.start();

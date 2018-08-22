@@ -12,7 +12,12 @@ class Excecute {
         InterfaceObject io = new InterfaceObject() {
             @Override
             public void display(){
-                System.out.println("Hello");
+                print();
+                System.out.println("display()--->");
+            }
+
+            public void print() {
+                System.out.println("hello()--->");
             }
         };
         io.display();

@@ -11,7 +11,7 @@ class SubClass implements Mine {
 	}
 }
 
- class Parent {
+class Parent {
 	protected void display() {
 		System.out.println("-----Parent-------> ");
 	}
