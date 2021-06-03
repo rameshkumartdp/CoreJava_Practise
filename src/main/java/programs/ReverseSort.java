@@ -1,6 +1,6 @@
 package programs;
 
-import org.hibernate.validator.constraints.EAN;
+//import org.hibernate.validator.constraints.EAN;
 
 import java.util.ArrayList;
 import java.util.Arrays;

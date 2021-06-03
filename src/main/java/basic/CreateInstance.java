@@ -14,11 +14,11 @@ public class CreateInstance {
         Class cls = ci.getClass();
         Object obj= cls.newInstance();
         CreateInstance cin = (CreateInstance) obj;
-        ((CreateInstance) obj).print();
+        cin.print();
 
         Class class1 = Class.forName("CreateInstance");
         Object obj1 = class1.newInstance();
-        CreateInstance cir = (CreateInstance)obj;
+        CreateInstance cir = (CreateInstance)obj1;
         cir.print();
     }
 }

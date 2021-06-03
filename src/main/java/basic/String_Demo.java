@@ -14,6 +14,7 @@ public class String_Demo {
 		int x = 10+1;
 		double y = 10.5;
 		x+=y;
+		//x=x+y;
 	    System.out.println(y+" "+x);
 	}
 }

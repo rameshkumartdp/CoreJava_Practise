@@ -20,6 +20,8 @@ public enum EnumDemo implements Serializable{
         this.city = city;
     }
 
+    private EnumDemo(){}
+
     //public abstract void abs();
 
     public String getComapny() {

@@ -1,4 +1,4 @@
-package basic;
+package designPatterns;
 
 /**
  * Created by rk0000 on 7/18/18.

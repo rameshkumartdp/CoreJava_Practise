@@ -30,11 +30,12 @@ public class Sort_Property {
 		mySet.add(e3);
 		mySet.add(e4);
 		Comparator comp = new Comparator<Employee>() {
-				public int compare(Employee e1, Employee e2){
-					String name1=e1.name;
-					String name2=e2.name;
-					return name1.compareTo(name2);
-				}};
+			@Override
+			public int compare(Employee e1, Employee e2){
+				String name1=e1.name;
+				String name2=e2.name;
+				return name1.compareTo(name2);
+			}};
 		Collections.sort(mySet , comp);
 		Iterator itr = mySet.iterator();
 		while(itr.hasNext()) {

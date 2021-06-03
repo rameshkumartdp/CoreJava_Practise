@@ -11,7 +11,7 @@ public class LambdaDemo {
     public static void main(String[] args) {
         String[] myStr = {"mango", "banana", "orange", "apple"};
         List<String> list = Arrays.asList(myStr);
-        list.forEach((String obj) -> System.out.println(obj));
+        list.forEach((String str) -> System.out.println(str));
         System.out.println("-------");
         list.forEach(System.out :: println);
 

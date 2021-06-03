@@ -7,9 +7,13 @@ import java.util.Optional;
  */
 public class OptionalDemo {
     public static void main(String[] args) {
-        Optional<String> opt = Optional.ofNullable("123");
+        String str = "hello";
+        Optional<String> opt = Optional.ofNullable(str);
         System.out.println(opt.isPresent());
+        System.out.println(opt);
         System.out.println(opt.orElse("Hello"));
+
+        System.out.println(opt.filter(val -> val.equals("hello")).get());
 
 
     }

@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * Created by rk0000 on 8/7/18.
  */
-public class ArraysIntersect {
+public class Merge_Arrays {
     public static void main(String[] args) {
         int[] array1 = {12,15,17,19};
         int[] array2 = {12,17,20,23};

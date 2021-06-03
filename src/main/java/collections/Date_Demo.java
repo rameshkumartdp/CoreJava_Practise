@@ -7,10 +7,10 @@ import java.util.Date;
 public class Date_Demo {
 
 	public static void main(String[] args) {
-		SimpleDateFormat sdf  = new SimpleDateFormat("dd-MMM-yyyy HH:mm:SSSZ");
+		SimpleDateFormat sdf  = new SimpleDateFormat("dd-MMM-yyyy");
 		System.out.println(sdf.format(new Date()));
 		try {
-			System.out.println(sdf.parse("04041989"));
+			System.out.println(sdf.parse("04-04-1989"));
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

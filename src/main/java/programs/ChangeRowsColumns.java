@@ -18,9 +18,9 @@ public class ChangeRowsColumns {
         System.out.println();
         for(int i=0; i<input.length; i++) {
             for(int j=0; j<input.length; j++) {
-                if(input[i]==input[j]) {
-                    input[j][i] = 0;
-                }
+//                if(input[i]==input[j]) {
+//                    input[j][i] = 0;
+//                }
                 System.out.print(input[j][i] + " ");
             }
             System.out.println();

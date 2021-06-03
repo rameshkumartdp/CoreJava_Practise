@@ -1,13 +1,12 @@
-package basic;
+package designPatterns;
 
-public class Builder {
+public class Builder_Demo {
     public static void main(String[] args) {
-        Cake cake = new Cake.Builder()
-                            .sugar(1)
-                            .cheese(2)
-                            .cherry(1)
-                            .build();
-        System.out.println(cake.getCheese()+" "+cake.getCherry()+" "+cake.getSugar());
+        Cake cake = new Cake.Builder().sugar(10)
+                                      .cheese(2)
+                                      .cherry(3)
+                                      .build();
+        System.out.println(cake.getCheese());
     }
 }
 
@@ -25,10 +24,12 @@ class Cake {
             this.sugar = sugar;
             return this;
         }
+
         public Builder cherry(int cherry) {
             this.cherry = cherry;
             return this;
         }
+
         public Builder cheese(int cheese) {
             this.cheese = cheese;
             return this;

@@ -2,6 +2,7 @@ package threads;
 
 public class Thread_Name implements Runnable {
 	
+	@Override
 	public void run() {
 		System.out.println("Hello");
 	}

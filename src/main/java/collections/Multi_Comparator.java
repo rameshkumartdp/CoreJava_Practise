@@ -7,8 +7,30 @@ import java.util.*;
  */
 public class Multi_Comparator {
     public static void main(String[] args) {
-        List<Labour> myList = Arrays.asList(new Labour("Ramesh",29,100),new Labour("Tom",10,90), new Labour("Jerry",18,99));
-        Collections.sort(myList, new ComparatorChain(new NameComparator(),new AgeComparator(), new SalaryComparator()));
+        Comparator<Labour> nameComparator = new Comparator<Labour>() {
+            @Override
+            public int compare(Labour o1, Labour o2) {
+                return o1.name.compareTo(o2.name);
+            }
+        };
+        Comparator<Labour> ageComparator = new Comparator<Labour>() {
+            @Override
+            public int compare(Labour o1, Labour o2) {
+                return o1.age - o2.age;
+            }
+        };
+        Comparator<Labour> salaryComparator = new Comparator<Labour>() {
+            @Override
+            public int compare(Labour o1, Labour o2) {
+                return o1.salary - o2.salary;
+            }
+        };
+
+        Labour ramesh = new Labour("Ramesh",29,100);
+        Labour tom = new Labour("Tom",10,90);
+        Labour jerry = new Labour("Jerry",18,99);
+        List<Labour> myList = Arrays.asList(ramesh, tom, jerry);
+        Collections.sort(myList, new ComparatorChain(nameComparator, ageComparator, salaryComparator));
         myList.forEach((Labour obj) -> System.out.println(obj.name+" "+obj.age+" "+obj.salary));
     }
 }
@@ -30,7 +52,7 @@ class ComparatorChain implements Comparator<Labour>{
     ComparatorChain(Comparator<Labour>... comparatorsList) {
         comparatorList = Arrays.asList(comparatorsList);
     }
-
+    @Override
     public int compare(Labour l1, Labour l2) {
         for(Comparator<Labour> comparator : comparatorList) {
             int value = comparator.compare(l1, l2);
@@ -39,26 +61,5 @@ class ComparatorChain implements Comparator<Labour>{
             }
         }
         return 0;
-    }
-}
-
-class NameComparator implements Comparator<Labour> {
-    @Override
-    public int compare(Labour l1, Labour l2) {
-        return l1.name.compareTo(l2.name);
-    }
-}
-
-class AgeComparator implements Comparator<Labour> {
-    @Override
-    public int compare(Labour l1, Labour l2) {
-        return l1.age - l2.age ;
-    }
-}
-
-class SalaryComparator implements Comparator<Labour> {
-    @Override
-    public int compare(Labour l1, Labour l2) {
-        return l1.salary - l2.salary;
     }
 }

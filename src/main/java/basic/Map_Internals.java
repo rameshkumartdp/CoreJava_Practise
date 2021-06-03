@@ -11,7 +11,9 @@ public class Map_Internals {
         Map<String, String> map = new HashMap<>();
         map.put("Ea", "Ramesh");
         map.put("FB", "Kumar");
+        System.out.println(map);
         System.out.println(map.put("Ea", "Kumar"));
-        //System.out.println("Ea".hashCode()+"   "+"FB".hashCode());
+        System.out.println(map);
+        System.out.println("Ea".hashCode()+"   "+"FB".hashCode());
     }
 }

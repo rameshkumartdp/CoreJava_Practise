@@ -7,7 +7,7 @@ import java.util.concurrent.CountDownLatch;
  */
 public class CountDownLatchDemo {
     public static void main(String[] args) {
-        CountDownLatch latch = new CountDownLatch(2);
+        CountDownLatch latch = new CountDownLatch(1);
         Runnable r = new Runnable() {
             @Override
             public void run() {
@@ -15,12 +15,12 @@ public class CountDownLatchDemo {
                 latch.countDown();
             }
         };
-        /*Thread t1 = new Thread(r, "T1");
+        Thread t1 = new Thread(r, "T1");
         Thread t2 = new Thread(r, "T2");
         Thread t3 = new Thread(r, "T3");
         t1.start();
         t2.start();
-        t3.start();*/
+        t3.start();
 
         try {
             latch.await();
@@ -34,7 +34,6 @@ public class CountDownLatchDemo {
 class Count implements Runnable {
     @Override
     public void run()  {
-
         System.out.println(Thread.currentThread().getName()+"  started");
     }
 }

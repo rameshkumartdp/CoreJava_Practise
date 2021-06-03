@@ -4,7 +4,7 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.util.Date;
 
-public class Demo {
+public class Overload_Override {
 
 	int val;
 
@@ -19,12 +19,18 @@ public class Demo {
 	}
 }
 
-class DemoSub extends Demo {
+class DemoSub extends Overload_Override {
 	@Override
 	public String getDescription(String obj) {
 		System.out.println("String SUB");
 		return obj;
 	}
+
+//	@Override
+//	public String getDescription(Object date) {
+//		System.out.println("Object SUB");
+//		return date;
+//	}
 
 	public static void main(String[] args) throws Exception{
 		DemoSub d = new DemoSub();

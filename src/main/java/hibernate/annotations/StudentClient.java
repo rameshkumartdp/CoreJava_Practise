@@ -11,7 +11,7 @@ class StudentClient
 	public static void main(String[] args) 
 	{
 		Configuration cfg = new AnnotationConfiguration();
-		cfg.addAnnotatedClass(StudentBean.class);
+		//cfg.addAnnotatedClass(StudentBean.class);
 		cfg.setProperty("hibernate.connection.driver_class", "com.mysql.cj.jdbc.Driver");
 		cfg.setProperty("hibernate.connection.url", "jdbc:mysql://localhost:3306/test");
 		cfg.setProperty("hibernate.connection.username", "ramesh");

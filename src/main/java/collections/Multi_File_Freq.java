@@ -20,7 +20,7 @@ public class Multi_File_Freq {
 
 		Map<String, Integer> wordMap = new HashMap<String, Integer>();
 		BufferedReader br =null;
-			File dir = new File("/Users/rk0000/Ramesh/Code/Practise/src/main/resources/files/");  //have 5 files
+			File dir = new File("D:\\My Docs\\Projects\\Projects\\Practise\\src\\main\\resources\\files");  //have 5 files
 			for (File file : dir.listFiles()) {
 				br = new BufferedReader(new FileReader(file));
 				String line = null;

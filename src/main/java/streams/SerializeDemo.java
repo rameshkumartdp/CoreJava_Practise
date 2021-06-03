@@ -9,16 +9,18 @@ public class SerializeDemo {
     public static void main(String[] args) throws Exception{
         Student st1 = new Student("Ramesh", 132228);
         Student st2 = new Student("Sony", 132222);
-        ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("/Users/rk0000/Ramesh/Code/Practise/src/main/resources/output.txt"));
+        ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("D:\\My Docs\\Projects\\Projects\\Practise\\src\\main\\resources\\output.txt"));
         oos.writeObject(st1);
         oos.writeObject(st2);
 
         oos.close();
 
-        ObjectInputStream ois = new ObjectInputStream(new FileInputStream("/Users/rk0000/Ramesh/Code/Practise/src/main/resources/output.txt"));
+        ObjectInputStream ois = new ObjectInputStream(new FileInputStream("D:\\My Docs\\Projects\\Projects\\Practise\\src\\main\\resources\\output.txt"));
         while(true) {
             try {
                 Student stu = (Student) ois.readObject();
+                long serialVersionUID = ObjectStreamClass.lookup(Student.class).getSerialVersionUID();
+                System.out.println("serialVersionUID--->  "+serialVersionUID);
                 System.out.println(stu.getName());
             } catch(EOFException e) {
                 break;
@@ -29,6 +31,7 @@ public class SerializeDemo {
 }
 
 class Student implements Serializable{
+    private static final long serialVersionUID = 68265620232169641L;
     private String name;
     private int rollNo;
     public Student(String name, int roll) {

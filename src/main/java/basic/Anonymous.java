@@ -20,7 +20,7 @@ class Anonymous  {
 		anon.print();
 		new Hello_New() {
 			public void print(){
-				System.out.println("Hello WOrld");
+				System.out.println("Hello WOrld1");
 			}
 		}.print();
 		

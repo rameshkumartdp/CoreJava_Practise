@@ -8,7 +8,7 @@ public class DemoClient {
 
 		ApplicationContext context = new FileSystemXmlApplicationContext("D:/WGP/workspace/Testing/src/spring/hibernate/spring.cfg.xml");
 		DemoInterImpl d = (DemoInterImpl) context.getBean("di");
-		System.out.println(d.getDetails());
+//		System.out.println(d.getDetails());
 		
 	}
 }

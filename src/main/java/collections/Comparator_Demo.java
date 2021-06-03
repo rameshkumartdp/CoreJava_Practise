@@ -13,15 +13,16 @@ public class Comparator_Demo {
         Student sd1 = new Student(132228, "Ramesh", 38000);
         Student sd2 = new Student(132222, "Sony", 23000);
         Student sd3 = new Student(130967, "Sow", 22000);
-        List<Student> studentList = Arrays.asList(sd1,sd2,sd3);
+        Student sd4 = new Student(14938, "Jerry", 18000);
+        List<Student> studentList = Arrays.asList(sd1,sd2,sd3,sd4);
         Comparator<Student> comp = new Comparator<Student>() {
             @Override
             public int compare(Student o1, Student o2) {
-                return o2.name.compareTo(o1.name);
+                return o1.name.compareTo(o2.name);
             }
         };
         Collections.sort(studentList, comp);
-        studentList.forEach((Student obj) -> System.out.println(obj.getName()+" "+obj.getRollNo()+" "+obj.getMarks()));
+        studentList.forEach((Student std) -> System.out.println(std.getName() + " " + std.getRollNo() + " " + std.getMarks()));
     }
 }
 

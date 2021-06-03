@@ -1,6 +1,5 @@
 package collections;
 
-import javax.persistence.criteria.CriteriaBuilder;
 import java.util.*;
 
 /**
@@ -31,7 +30,7 @@ public class CommonEle4mLists {
         List<Map.Entry<Integer, Integer>> list = new ArrayList(myMap.entrySet());
         for(Map.Entry<Integer, Integer> entry : list) {
             if(entry.getValue() == mainList.size()) {
-                System.out.println(entry);
+                System.out.println(entry.getKey());
             }
         }
     }

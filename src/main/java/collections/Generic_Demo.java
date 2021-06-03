@@ -6,14 +6,14 @@ public class Generic_Demo<E> {
 		return e;
 	}
 	public void set(E e) {
-		this.e=e;
+		this.e = e;
 	}
 
 	public static void main(String[] args) {
 		Generic_Demo<Integer> demo = new Generic_Demo<>();
 		demo.set(1);
 		demo.set(2);
-		System.out.println(demo.get(2));
+		System.out.println(demo.get(3));
 	}
 
 }

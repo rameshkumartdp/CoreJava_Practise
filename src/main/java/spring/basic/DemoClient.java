@@ -12,7 +12,7 @@ import java.util.Arrays;
 public class DemoClient {
 	public static void main(String args[]) {
 
-		Resource res = new ClassPathResource("spring.cfg.xml");
+		Resource res = new ClassPathResource("D:\\My Docs\\Practise-master\\src\\main\\resources\\spring.cfg.xml");
 		BeanFactory factory = new XmlBeanFactory(res);
 		Demo dem  = (Demo) factory.getBean("dem");
 		System.out.println();

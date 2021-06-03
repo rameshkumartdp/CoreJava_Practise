@@ -8,8 +8,8 @@ import java.util.List;
  */
 public class AnagramDemo {
     public static void main(String[] args) {
-        String str1 = "ramesh";
-        String str2 = "shraem";
+        String str1 = "rameshr";
+        String str2 = "shraemr";
         char[] char1 = str1.toCharArray();
         char[] char2 = str2.toCharArray();
         int anagram = 0;

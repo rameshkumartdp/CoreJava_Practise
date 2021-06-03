@@ -28,6 +28,9 @@ public class SortedSet_Demo {
 		//tree.add(null);
 		tree.add(new Students(10) );
 		tree.add(new Students(20) );
+		tree.add(new Students(50) );
+		tree.add(new Students(30) );
+		tree.add(new Students(40) );
 		
 		//tree.add(false);
 		tree.forEach((Students obj) -> System.out.println(obj.getId()));

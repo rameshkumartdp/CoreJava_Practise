@@ -14,7 +14,7 @@ public class DiffEqualsHashCode {
         System.out.println("hashCode()---> "+first.hashCode()+"  "+second.hashCode());
         System.out.println("equals()--->  "+first.equals(second));
         System.out.println("hash()--->  "+hash(first)+"  "+hash(second));
-        System.out.println("bucket location --->  "+(hash(first) % (16-1))+"  "+hash(second) % (16 - 1)+"  "+hash(third) % (16 - 1));
+        //System.out.println("bucket location --->  "+(hash(first) % (16-1))+"  "+hash(second) % (16 - 1)+"  "+hash(third) % (16 - 1));
         Map map = new HashMap<>();
         map.put(second,2);
         map.put(first,1);
@@ -25,10 +25,11 @@ public class DiffEqualsHashCode {
 
     private static int hash(String s) {
         int hash = 0;
-        int length = s.length();
+        char[] cArray = s.toCharArray();
+        int length = cArray.length;
         for(int i=0; i<length; i++) {
-            char c = s.charAt(i);
-            hash = 31*hash + c;
+            hash = 31*hash + cArray[i];
+            //System.out.println("hash in loop--->  "+hash);
         }
         return hash;
     }

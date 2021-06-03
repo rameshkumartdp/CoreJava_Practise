@@ -18,21 +18,20 @@ public class Frequency_Demo {
 		//System.out.println(Collections.frequency(myList, 20));
 		
 		try {
-			BufferedReader br = new BufferedReader(new FileReader("/Users/rk0000/Ramesh/Code/Practise/src/main/resources/frequency.txt"));
+			BufferedReader br = new BufferedReader(new FileReader("D:\\My Docs\\Projects\\Projects\\Practise\\src\\main\\resources\\frequency.txt"));
 			String str;
 			StringBuffer sb = new StringBuffer();
-			List<String> fileList;
 			while((str=br.readLine())!=null) {
 				 sb = sb.append(str+" ");
 			}
 			String[] array  = sb.toString().split(" ");
-			fileList = Arrays.asList(array);
+			List<String> tokenList = Arrays.asList(array);
 			//System.out.println("File content----->    "+fileList);
-			ListIterator<String> itr = fileList.listIterator();
+			ListIterator<String> itr = tokenList.listIterator();
 			Map myMap = new LinkedHashMap<>();
 			while(itr.hasNext()) {
 				String val = itr.next();
-				myMap.put(val, Collections.frequency(fileList,val));
+				myMap.put(val, Collections.frequency(tokenList,val));
 				//System.out.println("Frequency  ----  "+val+"   "+Collections.frequency(fileList,val));
 			}
 			br.close();

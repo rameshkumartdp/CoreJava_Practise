@@ -17,7 +17,7 @@ class Excecute {
             }
 
             public void print() {
-                System.out.println("hello()--->");
+                System.out.println("print()--->");
             }
         };
         io.display();

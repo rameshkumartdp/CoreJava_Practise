@@ -1,4 +1,4 @@
-package basic;
+package designPatterns;
 
 import sun.reflect.Reflection;
 
@@ -40,10 +40,10 @@ public class Singleton implements Cloneable, Serializable {
 			Singleton single2 = (Singleton) single.clone();
 			System.out.println("with clone() --->  "+single2.hashCode());
 			try {
-				ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("/Users/rk0000/Ramesh/Code/Practise/src/main/resources/singleton.txt"));
+				ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("D:\\My Docs\\Projects\\Projects\\Practise\\src\\main\\resources\\singleton.txt"));
 				oos.writeObject(single);
 
-				ObjectInputStream ois = new ObjectInputStream(new FileInputStream("/Users/rk0000/Ramesh/Code/Practise/src/main/resources/singleton.txt"));
+				ObjectInputStream ois = new ObjectInputStream(new FileInputStream("D:\\My Docs\\Projects\\Projects\\Practise\\src\\main\\resources\\singleton.txt"));
 				Singleton single3 = (Singleton)ois.readObject();
 				System.out.println("with Serialization() --->  "+single3.hashCode());
 
