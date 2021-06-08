@@ -1,4 +1,4 @@
-package programs;
+package programs.sorting;
 
 /**
  * Created by Ramesh on 007 07.Jun.21.
