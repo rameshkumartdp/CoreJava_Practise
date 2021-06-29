@@ -16,7 +16,6 @@ public class RemoveDupsFromArray {
                 }
             }
         }
-
         System.out.println(Arrays.toString(result));
     }
 }

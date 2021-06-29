@@ -10,7 +10,7 @@ public class Greatest {
         for(int i=0; i<number.length; i++) {
             if(number[i] > first) {
                 first = number[i];
-                System.out.println(first);
+//                System.out.println(first);
             }
         }
         System.out.println(first);

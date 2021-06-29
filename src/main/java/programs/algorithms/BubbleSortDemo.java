@@ -1,4 +1,4 @@
-package programs.sorting;
+package programs.algorithms;
 
 /**
  * Created by rk0000 on 7/20/18.

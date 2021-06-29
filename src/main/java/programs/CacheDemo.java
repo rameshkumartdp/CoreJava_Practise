@@ -16,7 +16,6 @@ public class CacheDemo {
     protected class CacheDemoInner {
         public long lastAccessed = System.currentTimeMillis();
         public String value;
-
         protected CacheDemoInner(String value) {
             this.value = value;
         }
@@ -37,7 +36,6 @@ public class CacheDemo {
                                                 }
                                             }
             });
-
             t.setDaemon(true);
             t.start();
         }
@@ -52,7 +50,6 @@ public class CacheDemo {
     public Object get(Object key) {
         synchronized (cacheMap) {
             CacheDemoInner c = (CacheDemoInner) cacheMap.get(key);
-
             if (c == null)
                 return null;
             else {
@@ -75,16 +72,13 @@ public class CacheDemo {
     }
 
     public void cleanup() {
-
         long now = System.currentTimeMillis();
         ArrayList<String> deleteKey = null;
 
         synchronized (cacheMap) {
             Iterator<?> itr = cacheMap.entrySet().iterator();
-
             deleteKey = new ArrayList<>((cacheMap.size() / 2) + 1);
             CacheDemoInner c = null;
-
             while (itr.hasNext()) {
                 String key = (String) itr.next();
                 c = (CacheDemoInner) ((Entry<?, ?>) itr).getValue();

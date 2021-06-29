@@ -16,8 +16,7 @@ public class SecondLargestInArray {
                 large = array[i];
             } else if (array[i] > secondLarge) {
                 secondLarge = array[i];
-            }
-            else if (array[i] < small) {
+            } else if (array[i] < small) {
                 secondSmall = small;
                 small = array[i];
             } else if (array[i] < secondSmall) {

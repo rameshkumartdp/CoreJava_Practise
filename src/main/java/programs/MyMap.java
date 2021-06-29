@@ -27,7 +27,8 @@ public class MyMap<K, V> {
 
     public V get(K key) {
         checkIfKeyIsNull(key);
-        EntryClass<K, V> entry = buckets[getBucketIndex(key)];
+        int index = getBucketIndex(key);
+        EntryClass<K, V> entry = buckets[index];
         while(entry != null && !key.equals(entry.getKey())) {
             entry = entry.getNext();
         }

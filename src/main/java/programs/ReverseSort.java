@@ -18,7 +18,7 @@ public class ReverseSort {
             newList.add(new StringBuffer(str).reverse().toString());
         }
         Collections.sort(newList);
-        //System.out.println(newList);
+        System.out.println(newList);
         for(String str:newList) {
             System.out.println(new StringBuffer(str).reverse().toString());
         }
