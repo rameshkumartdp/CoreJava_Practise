@@ -5,13 +5,13 @@ import java.util.List;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.cfg.AnnotationConfiguration;
+import org.hibernate.cfg.Configuration;
 
 public class MyClient {
 
 	public static void main(String[] args) {
 
-		AnnotationConfiguration cfg = new AnnotationConfiguration();
+		Configuration cfg = new Configuration();
 		cfg.addAnnotatedClass(Delegate.class);
 		cfg.addAnnotatedClass(Event.class);
 

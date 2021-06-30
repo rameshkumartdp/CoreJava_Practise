@@ -3,14 +3,14 @@ package hibernate.annotations;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.cfg.AnnotationConfiguration;
+import org.hibernate.cfg.Configuration;
 import org.hibernate.cfg.Configuration;
 
 class StudentClient 
 {
 	public static void main(String[] args) 
 	{
-		Configuration cfg = new AnnotationConfiguration();
+		Configuration cfg = new Configuration();
 		//cfg.addAnnotatedClass(StudentBean.class);
 		cfg.setProperty("hibernate.connection.driver_class", "com.mysql.cj.jdbc.Driver");
 		cfg.setProperty("hibernate.connection.url", "jdbc:mysql://localhost:3306/test");

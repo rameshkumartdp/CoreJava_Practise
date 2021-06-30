@@ -2,13 +2,13 @@ package hibernate.OneToOne;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.cfg.AnnotationConfiguration;
+import org.hibernate.cfg.Configuration;
 
 public class MyClient {
 
 	public static void main(String[] args) {
 
-//		AnnotationConfiguration cfg = new AnnotationConfiguration();
+//		Configuration cfg = new Configuration();
 //		cfg.addAnnotatedClass(Employee.class);
 //		cfg.addAnnotatedClass(Employee_Dtls.class);
 //

@@ -1,7 +1,5 @@
 package programs;
 
-import org.apache.commons.collections.map.HashedMap;
-
 import java.util.*;
 
 /**
@@ -14,7 +12,7 @@ public class CommonIn3Arrays {
         List<Integer> list3 = Arrays.asList(40, 50, 60, 70, 80);
         List<List<Integer>> result = Arrays.asList(list1, list2, list3);
         System.out.println(list1.getClass());
-        Map<Integer, Integer> map = new HashedMap();
+        Map<Integer, Integer> map = new HashMap();
         for(int i=0; i<result.size(); i++) {
             for(int j=0; j<result.get(i).size(); j++) {
                 int key = result.get(i).get(j);
