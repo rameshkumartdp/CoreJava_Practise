@@ -1,3 +1,7 @@
+import org.springframework.http.client.ClientHttpRequestFactory;
+import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
+import org.springframework.web.client.RestTemplate;
+
 import javax.persistence.criteria.CriteriaBuilder;
 import java.util.*;
 
@@ -14,5 +18,11 @@ public class TestProgram {
             System.out.println(list1[i]);
         }
         //System.out.println(Arrays.toString(result));
+
+
+        HttpComponentsClientHttpRequestFactory clientHttpRequestFactory = new HttpComponentsClientHttpRequestFactory();
+        clientHttpRequestFactory.setConnectionRequestTimeout(3000);
+        RestTemplate restTemplate = new RestTemplate(clientHttpRequestFactory);
+        //MyObject object = restTemplate.getForObject("url", MyObject.class);
     }
 }
