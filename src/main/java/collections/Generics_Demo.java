@@ -6,6 +6,14 @@ import java.util.List;
 
 public class Generics_Demo {
 
+	void printData(List<String> data) {
+		System.out.println(data);
+	}
+
+//	void printData(List<Integer> data) {
+//		System.out.println(data);
+//	}
+
 	public static void main(String[] args) {
 		List list = new ArrayList();
 		list.add(10);

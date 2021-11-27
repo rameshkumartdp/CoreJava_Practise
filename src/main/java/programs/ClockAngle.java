@@ -15,7 +15,7 @@ public class ClockAngle {
     }
 
     public static void main(String[] args) {
-        int hour = 5;
+        int hour = 6;
         int min = 30;
         System.out.print(findAngle(hour, min));
     }

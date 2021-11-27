@@ -5,14 +5,13 @@ package programs;
  */
 public class Anagarm_Loops {
     public static void main(String[] args) {
-        System.out.print("Enter the First String : ");
-        String s1 = "ramesh";
-        String s2 = "shmera";
+        String s1 = "rameshr";
+        String s2 = "shmerard";
 
         if (checkAnagram(s1, s2))
-            System.out.println(s1 + " and " + s2 + " are Anagrams");
+            System.out.println("Anagrams");
         else
-            System.out.println(s1 + " and " + s2 + " are NOT Anagrams");
+            System.out.println(" NOT Anagrams");
 
 
     }

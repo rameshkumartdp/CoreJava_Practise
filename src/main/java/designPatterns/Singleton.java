@@ -37,7 +37,7 @@ public class Singleton implements Cloneable, Serializable {
 		Singleton single1 = Singleton.getInstance();
 		try {
 			System.out.println("with getInstance() --->  "+single.hashCode()+"  "+single1.hashCode() );
-			Singleton single2 = (Singleton) single.clone();
+			Singleton single2 = single.clone();
 			System.out.println("with clone() --->  "+single2.hashCode());
 			try {
 				ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("D:\\My Docs\\Projects\\Projects\\Practise\\src\\main\\resources\\singleton.txt"));
@@ -71,7 +71,7 @@ public class Singleton implements Cloneable, Serializable {
 	}
 
 	@Override
-	protected Object clone() throws CloneNotSupportedException{
+	protected Singleton clone() throws CloneNotSupportedException{
 		return single;
 	}
 

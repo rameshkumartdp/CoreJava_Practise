@@ -12,16 +12,18 @@ class SubClass implements Mine {
 }
 
 class Parent {
-	protected void display() {
+	protected Number display() {
 		System.out.println("-----Parent-------> ");
+		return 123;
 	}
 }
 
 public class Override_Demo extends Parent {
 	 @Override
-	 public void display() throws NullPointerException{
+	 public Integer display() throws NullPointerException{
 		 super.display();
 		 System.out.println("-----Child-------> ");
+		 return 123;
 	}
 	public static void main(String[] args) {
 		Override_Demo dem = new Override_Demo();

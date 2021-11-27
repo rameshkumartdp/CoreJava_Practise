@@ -1,6 +1,7 @@
 package programs;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * Created by rk0000 on 8/8/18.
@@ -38,5 +39,8 @@ public class CommonIn3Arrays {
         list.stream().filter((Map.Entry<Integer, Integer> entry) -> entry.getValue()==result.size())
                      .forEach((Map.Entry<Integer, Integer> entry) -> System.out.println(entry.getKey()+"  "+entry.getValue()));
 
+
+//        Map<Integer, List<Integer>> map1 = result.stream().flatMap(e -> e.stream()).collect(Collectors.groupingBy(ele -> ele));
+//        System.out.println(map1);
     }
 }

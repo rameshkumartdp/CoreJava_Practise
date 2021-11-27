@@ -9,6 +9,8 @@ public class PipedExceptions {
         try {
             System.out.println(values[8]/0);
         } catch(ArithmeticException | IndexOutOfBoundsException ex) {
+            System.out.println(("Inside piped catch block--->"));
+            //ex = new ArithmeticException("User Defined");
             ex.printStackTrace();
         } catch(RuntimeException e) {
             e.printStackTrace();
