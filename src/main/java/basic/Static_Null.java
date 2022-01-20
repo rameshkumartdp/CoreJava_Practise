@@ -28,11 +28,13 @@ public class Static_Null {
 		
 		
 		{
-			System.out.println("non static blocks in super class is initialized");
+			System.out.println("NON static block from main()");
 		}
 
-		
+	}
 
+	{
+		System.out.println("NON static block from outside");
 	}
 
 }

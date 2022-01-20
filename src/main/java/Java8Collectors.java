@@ -12,6 +12,8 @@ import java.util.stream.Stream;
 public class Java8Collectors {
     public static void main(String[] args) {
         List<String> list = Arrays.asList("Tom", "Jerry", "Spike", "Tyke", "Toodles", "Jerry");
+//        List<String> secondList = list;
+//        secondList.add("ramesh");
         Set<String> set =  list.stream().collect(Collectors.toSet());
         System.out.println(set);
 
