@@ -1,6 +1,6 @@
 package designPatterns;
 
-import sun.reflect.Reflection;
+//import sun.reflect.Reflection;
 
 import java.io.*;
 import java.lang.reflect.Constructor;
@@ -25,11 +25,11 @@ public class Singleton implements Cloneable, Serializable {
 	}
 
 	void checkPerMission() {
-		Class self = Reflection.getCallerClass(1);
-		Class caller = Reflection.getCallerClass(3);
-		if (self != caller) {
-			throw new IllegalAccessError();
-		}
+//		Class self = Reflection.getCallerClass(1);
+//		Class caller = Reflection.getCallerClass(3);
+//		if (self != caller) {
+//			throw new IllegalAccessError();
+//		}
 	}
 
 	public static void main(String[] args) {

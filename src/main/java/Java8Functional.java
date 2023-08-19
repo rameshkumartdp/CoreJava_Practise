@@ -3,6 +3,9 @@
  */
 @FunctionalInterface
 interface TestFunctional {
+    abstract boolean equals(Object var1);  //This is from Object class
+    abstract int hashCode();              //This is from Object class
+
     void print();
     static void display() {}
     default void show() {}
