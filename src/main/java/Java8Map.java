@@ -30,5 +30,28 @@ public class Java8Map {
         List<String> myList = Arrays.asList("Red", "Green", "Blue");
         Map<String, Integer> listToMap = myList.stream().collect(Collectors.toMap(Function.identity(), str->str.length()));
         System.out.println("List to map--->  " +listToMap );
+
+
+        String fileText = "Hello Ramesh " +
+                          "Welcome to JAVA " +
+                          "Have a nice Day Ramesh " +
+                          "Welcome Others   ";
+        String[] searchItems = new String[] {"Ramesh", "Hello"};
+
+        Map<String, Integer> fileMap = new HashMap<>();
+        Arrays.stream(searchItems).forEach(k -> fileMap.put(k, 0));
+        System.out.println(fileMap);
+
+        Arrays.stream(fileText.split(" ")).forEach(word -> fileMap.computeIfPresent(word, (k,v) -> v+1));
+        System.out.println(fileMap);
+
+        Map<String, Integer> fileMap1 = new HashMap<>();
+        Arrays.stream(fileText.split(" ")).forEach(word -> fileMap1.merge(word, 1, Integer::sum));
+        System.out.println(fileMap1);
+
+        Map<String, Integer> fileMap2 = new HashMap<>();
+        Arrays.stream(fileText.split(" ")).forEach(word -> fileMap2.computeIfAbsent(word, k -> k.length()));
+        System.out.println(fileMap2);
+
     }
 }
