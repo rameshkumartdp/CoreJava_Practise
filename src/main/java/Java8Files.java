@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class Java8Files {
-    public static void main(String[] args) {
+    public static void main(String[] args) {   //lines(), list(), walk()
         try (Stream<String> fileLines = Files.lines(Paths.get("D:\\Ramesh\\Practise\\src\\main\\resources\\files\\StreamFile.txt"))) {
 //            fileLines.forEach(System.out::println);
 
