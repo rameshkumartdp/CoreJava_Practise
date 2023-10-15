@@ -37,7 +37,6 @@ class ProtoTest {
         Prototype prototype = new Prototype();
         prototype.loadData();
         Prototype prototype1 = (Prototype) prototype.clone();
-        Prototype prototype2 = (Prototype) prototype.clone();
         System.out.println(prototype.getMyList());
         System.out.println(prototype1.getMyList());
         List<String> newList = prototype.getMyList();

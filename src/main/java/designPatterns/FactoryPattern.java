@@ -29,7 +29,7 @@ class INDCurrency implements Currency {
 
 class UKCurrency implements Currency {
     public String currencyName() {
-        return "EURO";
+        return "GBP";
     }
 }
 
@@ -38,11 +38,11 @@ class CurrencyFactory {
         if(currency.equals("USD")) {
             return new USCurrency();
         }
-        if(currency.equals("USD")) {
-            return new USCurrency();
+        if(currency.equals("INR")) {
+            return new INDCurrency();
         }
-        if(currency.equals("USD")) {
-            return new USCurrency();
+        if(currency.equals("GBP")) {
+            return new UKCurrency();
         }
         throw new IllegalArgumentException("No currency");
     }

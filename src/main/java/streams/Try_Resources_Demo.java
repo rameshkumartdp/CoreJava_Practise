@@ -13,7 +13,26 @@ public class Try_Resources_Demo {
                 System.out.println(str);
             }
         } catch (IOException io) {
-            io.printStackTrace();
+            System.out.println("In Try with resources ---> " + io.getMessage());
+            //io.printStackTrace();
+        }
+
+        BufferedReader br = null;
+        try {
+            br = new BufferedReader(new FileReader(path));
+            String str;
+            while((str = br.readLine())!=null) {
+                System.out.println(str);
+            }
+        } catch (IOException e) {
+            System.out.println("In Normal Try ---> " + e.getMessage());
+//            e.printStackTrace();
+        } finally {
+            try {
+                br.close();
+            } catch (IOException ex) {
+                System.out.println("In finally ---> " + ex.getMessage());
+            }
         }
     }
 }

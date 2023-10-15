@@ -66,6 +66,9 @@ public class Java8GroupingBy {
         OptionalDouble maxSalary = employeeList.stream().mapToDouble(Employee::getSalary).max();
         System.out.println(maxSalary.getAsDouble());
 
+//        Map<String, List<String>> map1 = employeeList.stream().collect(
+//                Collectors.groupingBy(Employee::getDepartment, Collectors.filtering(x -> (Employee::new)), Collectors.toList()));
+
     }
 }
 

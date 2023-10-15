@@ -5,6 +5,7 @@ interface Interface {
 }
 
 class SubClass1 implements Interface {
+    @Override
     public String welcome() {
         return "Welcome JAVA ";
     }
@@ -15,6 +16,8 @@ abstract class AbstractDecorator implements Interface {
     public AbstractDecorator(Interface anInterface) {
         this.anInterface = anInterface;
     }
+
+    @Override
     public String welcome() {
         return anInterface.welcome();
     }
@@ -24,6 +27,8 @@ class DecoratorClass1 extends AbstractDecorator {
     DecoratorClass1(Interface interfcae) {
         super(interfcae);
     }
+
+    @Override
     public String welcome() {
         return anInterface.welcome()+ " Once ";
     }
@@ -33,6 +38,8 @@ class DecoratorClass2 extends AbstractDecorator {
     DecoratorClass2(Interface interfcae) {
         super(interfcae);
     }
+
+    @Override
     public String welcome() {
         return anInterface.welcome() + " Twice ";
     }

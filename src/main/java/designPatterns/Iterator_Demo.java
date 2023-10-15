@@ -14,9 +14,11 @@ interface RepositoryIntf {
 
 class RepositoryImpl implements RepositoryIntf {
     Object[] objArray;
+
     RepositoryImpl(Object... objArray) {
         this.objArray = objArray;
     }
+
     @Override
     public IteratorIntf getIterator() {
         return new NameIterator();
@@ -24,6 +26,7 @@ class RepositoryImpl implements RepositoryIntf {
 
     private class NameIterator implements IteratorIntf {
         int index;
+
         @Override
         public boolean hasNext() {
             if(index < objArray.length) {
@@ -32,6 +35,8 @@ class RepositoryImpl implements RepositoryIntf {
                 return false;
             }
         }
+
+        @Override
         public Object next() {
             if(this.hasNext()) {
                 return objArray[index++];

@@ -31,6 +31,13 @@ public class Java8Map {
         Map<String, Integer> listToMap = myList.stream().collect(Collectors.toMap(Function.identity(), str->str.length()));
         System.out.println("List to map--->  " +listToMap );
 
+        List<String> fruitList = Arrays.asList("Apple", "Banana", "Jackfruit");
+        Map<String, Integer> fruitMap = fruitList.stream().collect(Collectors.toMap(k -> k.toUpperCase(), v -> v.length()));
+        System.out.println("fruitMap--->  " +fruitMap );
+
+        Map<String, Integer> modFruitMap = fruitList.stream().collect(Collectors.toMap(k -> k.toUpperCase(), v -> v.length(), (k,v) -> k.hashCode()+v.hashCode(), TreeMap::new));
+        System.out.println("modFruitMap--->  " +modFruitMap );
+
 
         String fileText = "Hello Ramesh " +
                           "Welcome to JAVA " +

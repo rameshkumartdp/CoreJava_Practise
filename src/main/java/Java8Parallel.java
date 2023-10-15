@@ -13,5 +13,10 @@ public class Java8Parallel {
 
         System.out.println("Processors --->  " + Runtime.getRuntime().availableProcessors());
 
+
+        List<Integer> sortedList1 = numbers.parallelStream()
+                .peek(x -> System.out.println("number " + x + " Thread " + Thread.currentThread().getName()))
+                .sorted()
+                .collect(Collectors.toList());
     }
 }

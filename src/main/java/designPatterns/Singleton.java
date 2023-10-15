@@ -40,10 +40,11 @@ public class Singleton implements Cloneable, Serializable {
 			Singleton single2 = single.clone();
 			System.out.println("with clone() --->  "+single2.hashCode());
 			try {
-				ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("D:\\My Docs\\Projects\\Projects\\Practise\\src\\main\\resources\\singleton.txt"));
+				String fileName = "D:\\Ramesh\\Practise\\src\\main\\resources\\files\\singleton.txt";
+				ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(fileName));
 				oos.writeObject(single);
 
-				ObjectInputStream ois = new ObjectInputStream(new FileInputStream("D:\\My Docs\\Projects\\Projects\\Practise\\src\\main\\resources\\singleton.txt"));
+				ObjectInputStream ois = new ObjectInputStream(new FileInputStream(fileName));
 				Singleton single3 = (Singleton)ois.readObject();
 				System.out.println("with Serialization() --->  "+single3.hashCode());
 

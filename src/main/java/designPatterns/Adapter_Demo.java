@@ -17,22 +17,28 @@ class MP4Player implements AdvancedMediaPlayer {
     public void playMP4(String fileName) {
         System.out.println("Playing MP4");
     }
+
+    @Override
     public void playMKV(String fileName){
-        //
+        //nothing
     }
 }
 
 class MKVPlayer implements AdvancedMediaPlayer {
     @Override
     public void playMP4(String fileName) {
-        //
+        //nothing
     }
+
+    @Override
     public void playMKV(String fileName){
         System.out.println("Playing MKV");
     }
 }
+
 class MediaAdapter implements MediaPlayer {
     AdvancedMediaPlayer advancedMediaPlayer;
+
     MediaAdapter(String format) {
         if(format.equals("MP4")) {
             advancedMediaPlayer = new MP4Player();
@@ -41,6 +47,7 @@ class MediaAdapter implements MediaPlayer {
             advancedMediaPlayer = new MKVPlayer();
         }
     }
+
     @Override
     public void play(String format, String fileName) {
         if(format.equals("MP4")) {
