@@ -1,5 +1,6 @@
+package java8;
+
 import java.util.*;
-import java.util.function.Function;
 import java.util.stream.Collectors;
 
 public class Java8GroupingBy {
@@ -67,7 +68,7 @@ public class Java8GroupingBy {
         System.out.println(maxSalary.getAsDouble());
 
 //        Map<String, List<String>> map1 = employeeList.stream().collect(
-//                Collectors.groupingBy(Employee::getDepartment, Collectors.filtering(x -> (Employee::new)), Collectors.toList()));
+//                Collectors.groupingBy(java8.Employee::getDepartment, Collectors.filtering(x -> (java8.Employee::new)), Collectors.toList()));
 
     }
 }
@@ -97,7 +98,7 @@ class Employee {
 
     @Override
     public String toString() {
-        return "Employee{" +
+        return "java8.Employee{" +
                 "name='" + name + '\'' +
                 ", salary=" + salary +
                 ", department='" + department + '\'' +

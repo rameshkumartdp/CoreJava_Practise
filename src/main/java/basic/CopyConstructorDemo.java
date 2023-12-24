@@ -48,15 +48,15 @@ public class CopyConstructorDemo {
         System.out.println("cDemo1 --->  " + cDemo1);
 
         cDemo1.setName("Jerry");     // Primitive change
-        System.out.println("cDemo --->  " + cDemo);
-        System.out.println("cDemo1 --->  " + cDemo1);
+        System.out.println("cDemo .Jerry --->  " + cDemo);
+        System.out.println("cDemo1 .Jerry --->  " + cDemo1);
 
         Work1 work1 = cDemo1.getWork1();
         work1.setDepartment("Sales");
         work1.setLocation("India");
         cDemo1.setWork1(work1);     // Object change
-        System.out.println("cDemo --->  " + cDemo);
-        System.out.println("cDemo1 --->  " + cDemo1);
+        System.out.println("cDemo .Work1 --->  " + cDemo);
+        System.out.println("cDemo1 .Work1 --->  " + cDemo1);
 
     }
 

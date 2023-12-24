@@ -1,3 +1,5 @@
+package java8;
+
 import java.util.Objects;
 
 public class Java8Objects {

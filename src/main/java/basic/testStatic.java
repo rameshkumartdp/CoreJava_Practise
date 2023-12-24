@@ -8,7 +8,7 @@ class test123 {
     }
 
     public test123() {
-        a = 10;
+        a = 100;
     }
 
     static {

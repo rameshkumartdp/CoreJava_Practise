@@ -1,3 +1,5 @@
+package java8;
+
 import java.util.*;
 
 /**
@@ -9,7 +11,7 @@ public class Java8Comparator {
         Book book2 = new Book(2, "Yashwanth", "Spectrum");
         Book book3 = new Book(3, "Bala", "Boon");
         Book book4 = new Book(4, "Chaitanya", "Chai");
-        //List<Book> bookList = Arrays.asList(book1, book2, book3, book4);
+        //List<java8.Book> bookList = Arrays.asList(book1, book2, book3, book4);
         List<Book> bookList = new ArrayList<>();
         bookList.add(book1);
         bookList.add(book2);

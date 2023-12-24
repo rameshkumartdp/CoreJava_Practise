@@ -45,15 +45,15 @@ public class CloneDemo implements  Cloneable{
         System.out.println("cloneDemo1 --->  " + cloneDemo1);
 
         cloneDemo1.setName("Jerry");     // Primitive change
-        System.out.println("cloneDemo --->  " + cloneDemo);
-        System.out.println("cloneDemo1 --->  " + cloneDemo1);
+        System.out.println("cloneDemo .Jerry --->  " + cloneDemo);
+        System.out.println("cloneDemo1 .Jerry --->  " + cloneDemo1);
 
         Work work1 = cloneDemo1.getWork();
         work1.setDepartment("Sales");
         work1.setLocation("India");
         cloneDemo1.setWork(work1);     // Object change
-        System.out.println("cloneDemo --->  " + cloneDemo);
-        System.out.println("cloneDemo1 --->  " + cloneDemo1);
+        System.out.println("cloneDemo .Work --->  " + cloneDemo);
+        System.out.println("cloneDemo1 .Work --->  " + cloneDemo1);
 
     }
 

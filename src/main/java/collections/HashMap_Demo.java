@@ -20,6 +20,12 @@ public class HashMap_Demo {
 		map.put("Nine", "Kumar");
 		map.put("Ten", "Kumar");
 		map.put("Eleven", "Kumar");
+		map.put("Twelve", "Kumar");
+		map.put("Thirteen", "Kumar");
+//		map.put("Fourteen", "Kumar");
+//		map.put("Fifteen", "Kumar");
+//		map.put("Sixteen", "Kumar");
+
 		System.out.println(map);
 		System.out.println(map.size());
 		try {
@@ -35,13 +41,30 @@ public class HashMap_Demo {
 //		set.add("Twelve");
 //		System.out.println(("final map---->  "+map));
 
-		set.remove("Eleven");
-		System.out.println(("final map---->  "+map));
+//		set.remove("Eleven");
+//		System.out.println(("final map---->  "+map));
 
 		Collection<String> values = map.values();
 		//values.add("Twelve");
 		values.remove("Ten");
 		System.out.println(("final map1---->  "+map));
+
+		for(String key : set) {
+			int hashValue = hash(key);
+			System.out.println("hashValue of " + key + " ---> " + hashValue);
+			System.out.println("bucket Location of " + key + " ---> " + indexFor(hashValue, map.size()));
+		}
+
+	}
+
+	static final int hash(Object key) {
+		int hashCode = key == null ? 0 : key.hashCode();
+//		System.out.println("hashCode ---> " + hashCode);
+		return key == null ? 0 : (hashCode) ^ hashCode >>> 16;
+	}
+
+	static int indexFor(int keyHash, int mapCapacity) {
+		return keyHash & (mapCapacity - 1);
 	}
 
 }

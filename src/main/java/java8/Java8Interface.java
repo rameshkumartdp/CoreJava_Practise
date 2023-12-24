@@ -1,9 +1,11 @@
+package java8;
+
 /**
  * Created by Ramesh on 025 25.Sep.21.
  */
 interface FirstInterface {
     default void printData() {
-        System.out.println("printData from FirstInterface");
+        System.out.println("printData from java8.FirstInterface");
     }
 
 //    String getData();   //Uncommenting this results in Compilation error.
@@ -11,12 +13,12 @@ interface FirstInterface {
 
 interface SecondInterface {
     default void printData() {
-        System.out.println("printData from SecondInterface");
+        System.out.println("printData from java8.SecondInterface");
     }
 
     default String getData() {
-        System.out.println("getData from SecondInterface");
-        return "SecondInterface::getData";
+        System.out.println("getData from java8.SecondInterface");
+        return "java8.SecondInterface::getData";
     }
 }
 

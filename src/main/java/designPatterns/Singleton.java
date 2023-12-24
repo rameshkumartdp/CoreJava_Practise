@@ -1,7 +1,5 @@
 package designPatterns;
 
-//import sun.reflect.Reflection;
-
 import java.io.*;
 import java.lang.reflect.Constructor;
 
@@ -10,7 +8,14 @@ public class Singleton implements Cloneable, Serializable {
 	private static volatile Singleton single;
 
 	private Singleton() {
-		checkPerMission();
+		System.out.println("Constructor called ---> ");
+		if(single != null) {
+			try {
+				throw new RuntimeException("Cannot create another object");
+			} catch(RuntimeException e) {
+				e.printStackTrace();
+			}
+		}
 	}
 
 	public static Singleton getInstance() {
@@ -22,14 +27,6 @@ public class Singleton implements Cloneable, Serializable {
 			}
 		}
 		return single;
-	}
-
-	void checkPerMission() {
-//		Class self = Reflection.getCallerClass(1);
-//		Class caller = Reflection.getCallerClass(3);
-//		if (self != caller) {
-//			throw new IllegalAccessError();
-//		}
 	}
 
 	public static void main(String[] args) {
@@ -53,8 +50,14 @@ public class Singleton implements Cloneable, Serializable {
 				constructor.setAccessible(true);
 
 				Singleton single4 = (Singleton) cls.newInstance();
-				System.out.println("with Reflection() --->  " + single4.hashCode());
+				System.out.println("with Reflection() --1-->  " + single4.hashCode());
 
+				Class cls1 = Singleton.class;
+				Constructor constructor1 = cls1.getDeclaredConstructor();
+				constructor1.setAccessible(true);
+
+				Singleton single5 = (Singleton) cls1.newInstance();
+				System.out.println("with Reflection() --2-->  " + single5.hashCode());
 			} catch(IOException e) {
 				e.printStackTrace();
 			} catch(ClassNotFoundException e) {
