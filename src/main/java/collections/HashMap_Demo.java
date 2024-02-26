@@ -28,6 +28,9 @@ public class HashMap_Demo {
 
 		System.out.println(map);
 		System.out.println(map.size());
+		map.keySet().remove("Thirteen");
+		System.out.println(map);
+
 		try {
 			Field tableField = HashMap.class.getDeclaredField("table");
 			tableField.setAccessible(true);

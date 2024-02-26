@@ -58,5 +58,27 @@ public class ConcurrentMapDemo {
 
         }
         System.out.println("map------->  "+map);
+
+
+        ConcurrentHashMap<Integer, String> testMap = new ConcurrentHashMap<>();
+        testMap.put(5, "Tom");
+        testMap.put(2, "Jerry");
+        testMap.put(4, "Spike");
+        System.out.println("testMap ---> " + testMap);
+        Set<Integer> testSet = testMap.keySet();
+        System.out.println("testSet ---> " + testSet);
+
+        testSet.remove(5);
+        System.out.println("testSet after removal ---> " + testSet);
+        System.out.println("testMap after removal ---> " + testMap);
+
+        System.out.println("MappingCount ---> " + testMap.mappingCount());
+
+        Set<String> newKeySet = ConcurrentHashMap.newKeySet();
+        newKeySet.add("Tom");
+        newKeySet.add("Jerry");
+        newKeySet.add("Spike");
+
+        System.out.println("newKeySet ---> " + newKeySet);
     }
 }

@@ -1,15 +1,5 @@
 package designPatterns;
 
-public class Builder_Demo {
-    public static void main(String[] args) {
-        Cake cake = new Cake.Builder().sugar(10)
-                                      .cheese(2)
-                                      .cherry(3)
-                                      .build();
-        System.out.println(cake.getCheese());
-    }
-}
-
 class Cake {
     private int sugar;
     private int cherry;
@@ -56,5 +46,15 @@ class Cake {
 
     public int getCheese() {
         return cheese;
+    }
+}
+
+public class Builder_Demo {
+    public static void main(String[] args) {
+        Cake cake = new Cake.Builder().sugar(10)
+                                      .cheese(2)
+                                      .cherry(3)
+                                      .build();
+        System.out.println("Cake is made of " + cake.getSugar() + cake.getCherry() + cake.getCheese());
     }
 }

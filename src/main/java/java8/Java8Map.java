@@ -17,6 +17,12 @@ public class Java8Map {
         myMap.put(5, "Butch");
         System.out.println("Original map--->  "+myMap);
 
+        Set<Integer> keySet = myMap.keySet();
+        //keySet.add(100);
+
+        Collection<String> values = myMap.values();
+        //values.add("Hello");
+
         Map<Integer, String> sortedMap = myMap.entrySet()
                                             .stream()
                                             .sorted(Map.Entry.comparingByValue())

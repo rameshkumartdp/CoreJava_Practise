@@ -23,7 +23,7 @@ public class Java8MapReduce {
         myMap.put("Tom", 5244);
         myMap.put("Jerry", 576);
 
-        myMap.replaceAll((key, value) -> value>600 ? 1 : 0);
+        myMap.replaceAll((key, value) -> value > 600 ? 1 : value);
         System.out.println(myMap);
 
         myMap.forEach((key, value) -> System.out.println(key + " : " + value));

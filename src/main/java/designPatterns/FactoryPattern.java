@@ -17,34 +17,30 @@ interface Currency {
 
 class USCurrency implements Currency {
     public String currencyName() {
-        return "USD";
+        return "US Dollar";
     }
 }
 
 class INDCurrency implements Currency {
     public String currencyName() {
-        return "INR";
+        return "Indian Rupee";
     }
 }
 
 class UKCurrency implements Currency {
     public String currencyName() {
-        return "GBP";
+        return "Britain Pound";
     }
 }
 
 class CurrencyFactory {
     public static Currency createCurrency(String currency) {
-        if(currency.equals("USD")) {
-            return new USCurrency();
+        switch (currency) {
+            case "USD": return new USCurrency();
+            case "INR": return new INDCurrency();
+            case "GBP": return new UKCurrency();
+            default: throw new IllegalArgumentException("No currency");
         }
-        if(currency.equals("INR")) {
-            return new INDCurrency();
-        }
-        if(currency.equals("GBP")) {
-            return new UKCurrency();
-        }
-        throw new IllegalArgumentException("No currency");
     }
 }
 
